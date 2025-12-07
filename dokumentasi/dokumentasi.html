@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentasi Proyek TKJ - Hadi Rahmat</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Gaya khusus untuk halaman galeri ini */
+        .gallery-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+            h1 { transition: color 0.3s ease; }
+            h1:hover { color: #0019f7; }
+
+        }
+        .gallery-image {
+            width: 100%;
+            max-width: 450px;
+            margin: 15px;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        .image-caption {
+            font-style: fira sans;
+            margin-bottom: 80px;
+            color: #555;
+        }
+        .button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="gallery-container">
+        <h1>Dokumentasi Project Konfigurasi MikroTik</h1>
+        <p>Berikut adalah bukti hasil ujikompetensi saya selama masa pendidikan di TKJ.</p>
+        
+        <button id="tombolSaya" class="button-85">
+        Arsip Dokumentasi
+        </button>
+
+        <hr>
+
+        <div>
+            <img src="image/persiapan.jpg" alt="Topologi Jaringan" class="gallery-image">
+            <p class="image-caption">Persiapan sebelum pelaksanaan.</p>
+        </div>
+
+        <div>
+            <img src="image/perangkat.jpeg" alt="Hasil Pengkabelan" class="gallery-image">
+            <p class="image-caption">Perangkat yang digunakan seperti: Router, Switch dan Kabel UTP.</p>
+        </div>
+
+        <div>
+            <img src="image/pelaksanaan.jpeg" alt="Hasil Uji Koneksi" class="gallery-image">
+            <p class="image-caption">Pelaksanaan Project.</p>
+        </div>
+        
+    </div>
+<script src="script-button.js"></script>
+</body>
+</html>

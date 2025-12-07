@@ -1,0 +1,189 @@
+/* 1. Reset & Tata Letak Dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Warna latar belakang lebih terang */
+    color: #343a40;
+    line-height: 1.6;
+}
+
+header, section, footer {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 2. Gaya Header & Profil */
+header {
+    background-color: #ffffff;
+    border-bottom: 5px solid #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.profile-intro {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250;
+    border-radius: 50%; /* Membuat gambar bundar */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+}
+
+.profile-intro h2 {
+    color: #6c757d;
+    font-weight: 400;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.bio {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* 3. Gaya Keahlian/Skills */
+#skills {
+    text-align: center;
+    background-color: #e9ecef;
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    /* Animasi mikro: Sedikit membesar saat dihover */
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.skill-tag:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Efek membesar */
+}
+
+
+/* 4. Gaya Proyek (Grid) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    /* Transisi untuk Animasi Hover */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s;
+}
+
+/* Animasi Hover Kartu */
+.project-card:hover {
+    transform: translateY(-12px); /* Lebih terangkat */
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.project-card a:hover {
+    background-color: #1e7e34;
+}
+
+/* 5. Gaya Kontak */
+#kontak {
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.contact-icon {
+    font-size: 1.1em;
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-icon:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+/* 6. Animasi Fade-In & Delay */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out both; /* 'both' memastikan gaya akhir tetap */
+}
+
+/* Menambahkan Penundaan (Delay) agar elemen muncul berurutan */
+.delay-1 { animation-delay: 0.5s; } /* Header sudah terapkan animasi di 0s */
+.delay-2 { animation-delay: 1.0s; } /* Skills muncul setelah 1.0 detik */
+.delay-3 { animation-delay: 1.5s; } /* Proyek muncul setelah 1.5 detik */
+.delay-4 { animation-delay: 2.0s; } /* Kontak muncul setelah 2.0 detik */
+
+/* 7. Gaya Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: #cccccc;
+    font-size: 0.9em;
+}
